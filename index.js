@@ -1,4 +1,4 @@
-// First-class Function
+// First-class Functions
 
 //Problem 1:
 const uppercase = (string) => {
@@ -30,7 +30,7 @@ const returnsAnObj = (num1, num2) => {
 console.log(returnsAnObj(7, 9));
 
 
-//Higher-order Function
+//Higher-order Functions
 
 //Problem 1:
 
@@ -119,7 +119,24 @@ if (runners.runner1 === runners.runner2) {
 console.log(whoWinsRace());
 
 
-//Currying Function
+//Currying Functions
+
+const curryAdd = (a) => (b) => (c) => (d) => a + b + c + d;
+
+//Problem 1:
+
+const curryProtocol = curryAdd('https://');
+const currySubdomain = curryProtocol('www.');
+const curryDomain = currySubdomain('fullstackacademy.com');
+const curryTLD = curryDomain('/weather');
+console.log(curryTLD);
+
+//Problem 2:
+
+const curryTLD2 = curryDomain('/stocks');
+console.log(curryTLD2);
+
+
 
 
 
